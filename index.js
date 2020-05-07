@@ -33,44 +33,86 @@ const questions = () => {
       // project title
       type: 'input',
       name: 'title',
-      message: 'What is the title of your project?'
+      message: 'What is the title of your project? (Required)',
+      validate: titleInput => {
+        if (titleInput) {
+          return true;
+        } else {
+          console.log('Please enter the project title!');
+        }
+      }
     },    
     {
       // project description
       type: 'input',
       name: 'description',
-      message: 'Describe the project.'
+      message: 'Describe the project. (Required)',
+      validate: descriptionInput => {
+        if (descriptionInput) {
+          return true;
+        } else {
+          console.log('Please provide a description of the project!');
+        }
+      }
     },
     {
       // installation instructions
       type: 'input',
       name: 'installation',
-      message: 'Enter the project installation instructions.'
+      message: 'Enter the project installation instructions (Required).',
+      validate: installInput => {
+        if (installInput) {
+          return true;
+        } else {
+          console.log('Please provide installation instructions!')
+        }
+      }
     },
     {
       // usage information
       type: 'input',
       name: 'usage',
-      message: 'Enter the project usage information.'
+      message: 'Enter the project usage information. (Required)',
+      validate: usageInput => {
+        if (usageInput) {
+          return true;
+        } else {
+          console.log('Please provide usage instructions!');
+        }
+      }
     },
     {
       // contribution guidelines
       type: 'input',
       name: 'contribution',
-      message: 'Enter the project contribution guidelines.'
+      message: 'Enter the project contribution guidelines. (Required)',
+      validate: contributionInput => {
+        if (contributionInput) {
+          return true;
+        } else {
+          console.log('Please provide contributors!');
+        }
+      }
     },
     {
       // test instructions
       type: 'input',
       name: 'test',
-      message: 'Enter the project test instructions.'
+      message: 'Enter the project test instructions.'     
     },
     {
       // license
       type: 'checkbox',
       name: 'license',
-      message: 'What license do you want to use?',
-      choices: ['MIT', 'choice B', 'choice C', 'choice E']
+      message: 'What license do you want to use? (Required)',
+      choices: ['GNU General Public License 3.0', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT', 'The Unlicense'],
+      validate: licenseInput => {
+        if (licenseInput) {
+          return true;
+        } else {
+          console.log('Please make a choice!');
+        }
+      }
     }
 
 
