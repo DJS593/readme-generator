@@ -147,7 +147,7 @@ promptUser()
   }); 
   
   
-
+// print user input to a README.md file 
 
 const writeFile = fileContent => {
   return new Promise((resolve, reject) => {

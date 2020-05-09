@@ -9,10 +9,10 @@ const generatePage = templateData => {
 
   
   return `
-  # ${title}
+  # **${templateData.title}**
 
   ## Description 
-  ${description}
+  ${templateData.description}
   
   ## Table of Contents
   * [Installation](#installation)
