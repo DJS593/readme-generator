@@ -1,18 +1,8 @@
 
-//module.exports = templateData => {
-  // destructure page data by section
-  
-const generatePage = templateData => {
-
-  const { title, description } = templateData;
-  
-
-  
-  return `
-  # ${title}
+  # David
 
   ## Description 
-  ${description}
+  david 101
   
   ## Table of Contents
   * [Installation](#installation)
@@ -38,14 +28,4 @@ const generatePage = templateData => {
   ## Tests <a name="tests"></a>
   
   
-  `;
-};
-
-// ${data.title}
-// ${data.description}
-// ${data.installation}
-// ${data.usage}
-
-
-
-module.exports = generatePage;
+  
