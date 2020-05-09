@@ -1,26 +1,49 @@
 
+module.exports = data => {
+  // destructure page data by section
+  
+const { title, description } = data;
+  
 
-const generatePage = (name, github) => {
+  
   return `
-  <!DOCTYPE html> 
-  <html lang="en"> 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio Demo</title>
-  </head>
+  # ${data.title}
 
-  <body>
-    <h1>${name}</h1>
-    <h2><a href="https://github.com/${github}">Github</a></h2>
-  </body>
-  </html>
+  ## Description 
+  ${data.description}
+  
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
+  * [Badges](#badges)
+  * [Contributing](#contributing)
+  * [Tests](#tests) 
+  
+  ## Installation Instructions <a name="installation"></a> 
+  
+  ## Usage Instructions <a name="usage"></a>
+  
+  ## Credits <a name="credits"></a>
+  
+  ## License <a name="license"></a>
+  
+  ## Badges <a name="badges"></a>
+  
+  ## Contributing <a name="contributing"></a>
+  
+  ## Tests <a name="tests"></a>
+  
+  
   `;
 };
 
+// ${data.title}
+// ${data.description}
+// ${data.installation}
+// ${data.usage}
 
 
 
-
-module.exports = generatePage;
+//module.exports = generatePage;

@@ -14,19 +14,32 @@
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README
 
+
+
+//  BEGIN CODE
+
+
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generatePage = require('./src/page-template.js');
-
-//var profileDataArgs = process.argv.slice(2, process.argv.length);
-// console.log(profileDataArgs);
-//const [name, github] = profileDataArgs;
+//const generateMarkdown = require('./utils/generateMarkdown.js');
+//const generatePage = require('./src/page-template.js');
 
 
-  
+// taking code from weekly lesson as a starting point for the assignment
+
+fs.writeFile('./README.md', generatePage(data), err => {
+if (err) throw err;
+
+console.log('README.md complete! Check out README.md to see the output!');
+});
+
 
 // array of questions for user
-const questions = () => {
+
+// ADD SOME CONFIRM QUESTIONS 9.3.5
+
+const promptUser = () => {
+  
   return inquirer.prompt([
     
     {
@@ -120,14 +133,51 @@ const questions = () => {
 
   
   ]);
+  console.log(data);
 };
   
-questions().then(answers => console.log(answers));
+promptUser()
+  .then(answers => console.log(answers));
 
 
 // function to write README file
-function writeToFile(fileName, data) {
-}
+// function writeToFile(fileName, data) {
+//   return new Promise((resolve, reject) => {
+//     fs.writeFile('./README.md', data, err => {
+//       if (err) {
+//         reject(err);
+//         return;
+//       }
+//     })
+//   }
+// }
+
+// const writeToFile = fileContent => {
+//   return new Promise((resolve, reject) => {
+//     fs.writeFile('./dist/index.html', fileContent, err => {
+//       // if there's an error, reject the Promise and send the error to teh Promise's `.catch()` method
+//       if (err) {
+//         reject(err);
+//         // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+//         return;
+//       }
+//       // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+//       resolve({
+//         ok: true,
+//         message: 'File Created!'
+//       });
+//     });
+//   });
+// };
+
+
+
+
+
+
+
+
+
 
 // function to initialize program
 function init() {
@@ -138,20 +188,6 @@ function init() {
 init();
 
 
-// profileDataArr.forEach(profileItem => console.log(profileItem));
-
-// the above is the same as the following:
 
 
-// profileDataArr.forEach(function(profileItem) {
-//   console.log(profileItem);
-// });
 
-
-// printProfileData(profileDataArgs);
-
-// fs.writeFile('README.md', generatePage(name, github), err => {
-//   if (err) throw err;
-
-//   console.log('README.md complete! Check out README.md to see the output!');
-// });
