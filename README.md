@@ -29,7 +29,7 @@
   none
 
   ## Questions <a name="questions"></a>
-  (github.com/DJS593)
+  http://www.github.com/DJS593
   
-  [Email] (stadj099@yahoo.com) [ with any additional questions.] 
+  Email stadj099@yahoo.com) with any additional questions.
   
