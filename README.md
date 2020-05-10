@@ -31,5 +31,5 @@
   ## Questions <a name="questions"></a>
   http://www.github.com/DJS593
   
-  Email stadj099@yahoo.com) with any additional questions.
+  Email stadj099@yahoo.com with any additional questions.
   
