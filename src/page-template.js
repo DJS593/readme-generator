@@ -34,7 +34,6 @@ const generatePage = templateData => {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
   * [Badges](#badges)
   * [Contributing](#contributing)
@@ -47,13 +46,8 @@ const generatePage = templateData => {
   ## Usage Instructions <a name="usage"></a>
   ${usage}
   
-  ## Credits <a name="credits"></a>
-  ${credits}
-  
   ## License <a name="license"></a>
   ${license}
-  
-  ## Badges <a name="badges"></a>
   
   ## Contributing <a name="contributing"></a>
   ${contribution}
