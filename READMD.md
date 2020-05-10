@@ -1,14 +1,13 @@
 
-  # **s**
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
+  # **README.md Generator**
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description 
-  s
+  The app is designed to build a professional README.md file based on answers provided by the end-user on the command line.
   
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
   * [Badges](#badges)
   * [Contributing](#contributing)
@@ -16,29 +15,23 @@
   * [Questions](#questions)
   
   ## Installation Instructions <a name="installation"></a> 
-  s
+  A user will need to clone the repository, 'readme-generator' from github.com/DJS593 and install inquirer npm.
   
   ## Usage Instructions <a name="usage"></a>
-  s
-  
-  ## Credits <a name="credits"></a>
-  undefined
+  For any user who needs a standard README.md file.
   
   ## License <a name="license"></a>
-  Apache 2.0
-  
-  ## Badges <a name="badges"></a>
+  MIT
   
   ## Contributing <a name="contributing"></a>
-  s
+  Follow the Contributor Covenant Code of Conduct.
   
   ## Tests <a name="tests"></a>
-  s
+  none
 
   ## Questions <a name="questions"></a>
-  github.com/s
+  github.com/DJS593
   
-  Email s with any additional questions.
-  
+  Email stadj099 with any additional questions. 
   
   

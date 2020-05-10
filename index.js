@@ -1,48 +1,19 @@
-// DONE // GIVEN a command-line application that accepts user input
-// DONE // WHEN I am prompted for information about my application repository
-// DONE // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// DONE // WHEN I enter my project title
-// DONE // THEN this is displayed as the title of the README
-// DONE // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-// DONE // THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-// WHEN I choose a license for my application from a list of options
-// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// DONE // WHEN I enter my GitHub username
-// DONE // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-// DONE // WHEN I enter my email address
-// DONE // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-// DONE // WHEN I click on the links in the Table of Contents
-// DONE // THEN I am taken to the corresponding section of the README
+// App designed to build a README.md file by utilizing answers entered on the command line
 
-// STILL NEED TO TEST ALL FUNCTIONALITY //
-// need to show Aidan the code //
-
-//  BEGIN CODE
-
+// require section
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-//const generateMarkdown = require('./utils/generateMarkdown.js');
-const generatePage = require('./src/page-template.js');
+const generatePage = require('./util/generateMarkdown.js');
 
 
-// taking code from weekly lesson as a starting point for the assignment
+// promptUser asks the end-user a series of questions that will be used to build the final README.md
 
-// fs.writeFile('./README.md', pageHTML , err => {
-// if (err) throw err;
-
-// console.log('README.md complete! Check out README.md to see the output!');
-// });
-
-
-// array of questions for user
-
-// ADD SOME CONFIRM QUESTIONS 9.3.5
-
-const promptUser = () => {
-  
+const promptUser = () => { 
   return inquirer.prompt([
   
+    // list of questions about the README.md
+    // all questions require an answer
     {
       // project title
       type: 'input',
@@ -104,15 +75,22 @@ const promptUser = () => {
         if (contributionInput) {
           return true;
         } else {
-          console.log('Please provide contributors!');
+          console.log('Please provide contributioin guidelines!');
         }
       }
-    },
+    },    
     {
       // test instructions
       type: 'input',
       name: 'test',
-      message: 'Enter the project test instructions.'     
+      message: 'Please provide test instructions. (Required)',
+      validate: testInput => {
+        if (testInput) {
+          return true;
+        } else {
+          console.log('Please provide test instructions or enter "none."')
+        }
+      }
     },
     {
       // license
@@ -132,25 +110,43 @@ const promptUser = () => {
       // github user name
       type: 'input',
       name: 'username',
-      message: 'What is your GitHub username?'
+      message: 'What is your GitHub username? (Required)',
+      validate: githubInput => {
+        if (githubInput) {
+          return true;
+        } else {
+          console.log('Please enter your GitHub username.');
+        }
+      }
     },
     {
       // email address
       type: 'input',
       name: 'email',
-      message: 'What is your email address?',
+      message: 'What is your email address? (Required)',
+      validate: emailInput => {
+        if (emailInput) {
+          return true;
+        } else {
+          console.log('Please enter your email address.');
+        }
+      }
     }
 
   
   ]);
 };
   
+
+// a waterfall of promises and .then functions
+// prompt questions, then collect data, then write the file otherwise catch an error
+
 promptUser()
   .then(portfolioData => {
     return generatePage(portfolioData);
   })
-  .then(pageHTML => {
-    return writeFile(pageHTML);
+  .then(pageREADME => {
+    return writeFile(pageREADME);
   })
   .then(writeFileResponse => {
     console.log(writeFileResponse);
@@ -165,13 +161,10 @@ promptUser()
 const writeFile = fileContent => {
   return new Promise((resolve, reject) => {
     fs.writeFile('./READMD.md', fileContent, err => {
-      // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
       if (err) {
         reject(err);
-        // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
         return;
       }
-      // if everything went well, resolve the Promise and send the successful data to the `.then()` method
       resolve({
         ok: true,
         message: 'File Created!'
@@ -179,17 +172,4 @@ const writeFile = fileContent => {
     });
   });
 };
-
-
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
-init();
-
-
-
-
 

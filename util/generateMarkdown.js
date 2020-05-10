@@ -1,10 +1,10 @@
-
-//module.exports = templateData => {
-  // destructure page data by section
+// pull in the data for the README.md
   
 const generatePage = templateData => {
 
-  let { title, description, installation, usage, credits, contribution, test, email, username, license } = templateData;
+  let { title, description, installation, usage, contribution, test, email, username, license } = templateData;
+  
+  // if statement to ensure the correct badge is shown depending on license choic
   
   let badge = '';
  
@@ -23,6 +23,7 @@ const generatePage = templateData => {
     badge = ("[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)");
   }
     
+  // README.md file structure and linked data
 
   return `
   # **${title}**
@@ -58,8 +59,7 @@ const generatePage = templateData => {
   ## Questions <a name="questions"></a>
   github.com/${username}
   
-  Email ${email} with any additional questions.
-  
+  Email ${email} with any additional questions. 
   
   `;
 };
@@ -67,9 +67,3 @@ const generatePage = templateData => {
 
 module.exports = generatePage;
 
-// badges
-  // [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
-  // [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  // [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  // [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-  // [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
