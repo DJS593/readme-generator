@@ -15,7 +15,7 @@
 // DONE // THEN I am taken to the corresponding section of the README
 
 // STILL NEED TO TEST ALL FUNCTIONALITY //
-
+// need to show Aidan the code //
 
 //  BEGIN CODE
 
@@ -119,7 +119,7 @@ const promptUser = () => {
       type: 'checkbox',
       name: 'license',
       message: 'What license do you want to use? (Required)',
-      choices: ['GNU General Public License 3.0', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT', 'The Unlicense'],
+      choices: ['GNU GPL 3.0', 'Mozilla 2.0', 'Apache 2.0', 'MIT', 'The Unlicense'],
       validate: licenseInput => {
         if (licenseInput) {
           return true;

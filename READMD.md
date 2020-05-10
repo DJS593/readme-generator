@@ -1,8 +1,9 @@
 
-  # **README.md Generator**
+  # **s**
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
 
   ## Description 
-  Dynamically build a README.md file using information provided on the command line.
+  s
   
   ## Table of Contents
   * [Installation](#installation)
@@ -15,29 +16,29 @@
   * [Questions](#questions)
   
   ## Installation Instructions <a name="installation"></a> 
-  none
+  s
   
   ## Usage Instructions <a name="usage"></a>
-  none
+  s
   
   ## Credits <a name="credits"></a>
   undefined
   
   ## License <a name="license"></a>
-  MIT
+  Apache 2.0
   
   ## Badges <a name="badges"></a>
   
   ## Contributing <a name="contributing"></a>
-  undefined
+  s
   
   ## Tests <a name="tests"></a>
-  undefined
+  s
 
   ## Questions <a name="questions"></a>
-  github.com/DJS593
+  github.com/s
   
-  Email stadj099@yahoo.com with any additional questions.
+  Email s with any additional questions.
   
   
   
