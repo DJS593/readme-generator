@@ -9,13 +9,12 @@
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
-  * [Badges](#badges)
   * [Contributing](#contributing)
   * [Tests](#tests) 
   * [Questions](#questions)
   
   ## Installation Instructions <a name="installation"></a> 
-  A user will need to clone the repository, 'readme-generator' from github.com/DJS593 and install inquirer npm.
+  A user will need to clone the repository, 'readme-generator' from http://www.github.com/DJS593 and install inquirer npm.
   
   ## Usage Instructions <a name="usage"></a>
   For any user who needs a standard README.md file.
@@ -30,8 +29,8 @@
   none
 
   ## Questions <a name="questions"></a>
-  github.com/DJS593
+  http://www.github.com/DJS593
   
-  Email stadj099 with any additional questions. 
+  Email stadj099@yahoo.com with any additional questions. 
   
   

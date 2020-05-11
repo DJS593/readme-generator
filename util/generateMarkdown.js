@@ -36,7 +36,6 @@ const generatePage = templateData => {
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
-  * [Badges](#badges)
   * [Contributing](#contributing)
   * [Tests](#tests) 
   * [Questions](#questions)
@@ -57,7 +56,7 @@ const generatePage = templateData => {
   ${test}
 
   ## Questions <a name="questions"></a>
-  github.com/${username}
+  http://www.github.com/${username}
   
   Email ${email} with any additional questions. 
   
