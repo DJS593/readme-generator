@@ -25,9 +25,6 @@
   ## Contributing <a name="contributing"></a>
   Files are open source, but please adhere to the Contributor Convenant Code of Conduct.
   
-  ## Video Link
-  https://drive.google.com/file/d/1Rw8yVr-vYJUpMcGuMkXiOhZUQOHSWUUi/view
-  
   ## Tests <a name="tests"></a>
   none
 
@@ -36,4 +33,5 @@
   
   Email stadj099@yahoo.com with any additional questions. 
   
-  
+   ## Video Link
+  https://drive.google.com/file/d/1Rw8yVr-vYJUpMcGuMkXiOhZUQOHSWUUi/view
