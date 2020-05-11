@@ -32,5 +32,4 @@
   
   Email stadj099@yahoo.com with any additional questions.
   
-  ## Video Link
-  
+ 
